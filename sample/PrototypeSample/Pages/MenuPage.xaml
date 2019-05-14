@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages:BaseContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:controls="clr-namespace:PrototypeSample.Controls;assembly=PrototypeSample"
+    xmlns:pages="clr-namespace:Robo.Mvvm.Forms.Pages;assembly=Robo.Mvvm.Forms"
+    xmlns:vm="clr-namespace:PrototypeSample.Core.ViewModels;assembly=PrototypeSample.Core"
+    x:TypeArguments="vm:MenuViewModel"
+    x:Class="PrototypeSample.Pages.MenuPage" 
+    Title="Menu">
+    <StackLayout>
+        <controls:ListView x:Name="MenuItemsListView" 
+                           SeparatorVisibility="None" 
+                           HasUnevenRows="true" 
+                           ItemsSource="{Binding MenuItems}"
+                           ItemTappedCommand="{Binding MenuItemSelectedCommand}">
+            <controls:ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+                            <Label VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding .}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </controls:ListView.ItemTemplate>
+        </controls:ListView>
+    </StackLayout>
+</pages:BaseContentPage>

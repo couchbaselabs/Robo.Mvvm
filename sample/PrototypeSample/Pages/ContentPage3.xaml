@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:BaseContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:pages="clr-namespace:Robo.Mvvm.Forms.Pages;assembly=Robo.Mvvm.Forms"
+    xmlns:vm="clr-namespace:PrototypeSample.Core.ViewModels;assembly=PrototypeSample.Core"
+    x:TypeArguments="vm:ViewModel3"
+    x:Class="PrototypeSample.Pages.ContentPage3"
+    Title="Page 3">
+    <pages:BaseContentPage.Content>
+        <StackLayout  VerticalOptions="Center" HorizontalOptions="Center">
+            <Button Text="Dismiss Page" Command="{Binding DismissCommand}" />
+            <Button Text="Navigate to Tabbed Page" Command="{Binding NavigationCommand}" />
+        </StackLayout>
+    </pages:BaseContentPage.Content>
+</pages:BaseContentPage>
