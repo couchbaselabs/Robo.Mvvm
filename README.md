@@ -26,9 +26,9 @@ _(Much like how a simple robo..t exists to perform a few, targeted functions. Ye
 
 * **`Robo.Mvvm.Forms`** is a project that uses the `Robo.Mvvm` project, and provides a set of `Xamarin.Forms` specific class/object extensions that make creating prototype and simple `Xamarin.Forms` apps painless. 
 
-## Getting Started <a name="getting-started"></a>
+## Getting Started <a href="getting-started"></a>
 
-### Grab Dat Nuget! <a name="grab-dat-nuget"></a>
+### Grab Dat Nuget! <a href="grab-dat-nuget"></a>
 Yes, there's a nuget for this! In fact, there are two:
 
 1. `Robo.Mvvm` [![GitHub release](https://img.shields.io/nuget/v/Robo.Mvvm.svg?style=plastic)](https://www.nuget.org/packages/Robo.Mvvm)
