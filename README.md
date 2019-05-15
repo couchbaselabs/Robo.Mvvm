@@ -20,15 +20,15 @@ _(Much like how a simple robo..t exists to perform a few, targeted functions. Ye
 4. [Navigation](#navigation)
 5. [Dependency Injection](#dependency-injection)
 
-## Project Summary <a href="project-summary"></a>
+## Project Summary<a href="project-summary"></a>
 
 * **`Robo.Mvvm`** is a project that contains a few classes/enumerations/etc. to help quickly spin up a platform agnostic Model-View-ViewModel (MVVM) architectural design approach for an application. 
 
 * **`Robo.Mvvm.Forms`** is a project that uses the `Robo.Mvvm` project, and provides a set of `Xamarin.Forms` specific class/object extensions that make creating prototype and simple `Xamarin.Forms` apps painless. 
 
-## Getting Started <a href="getting-started"></a>
+## Getting Started<a href="getting-started"></a>
 
-### Grab Dat Nuget! <a href="grab-dat-nuget"></a>
+### Grab Dat Nuget!<a href="grab-dat-nuget"></a>
 Yes, there's a nuget for this! In fact, there are two:
 
 1. `Robo.Mvvm` [![GitHub release](https://img.shields.io/nuget/v/Robo.Mvvm.svg?style=plastic)](https://www.nuget.org/packages/Robo.Mvvm)
@@ -44,7 +44,7 @@ So, you may be wondering, which one do I use and where? Well, there's a simple a
 
 So, it's best to separate your `Xamarin.Forms` app/view level code (i.e. ContentPage, ContentView, Button, etc.) from your ViewModels. At the very least, in separate projects. <./rant>
 
-### Initialize Robo.Mvvm.Forms <a href="initialize"></a>
+### Initialize Robo.Mvvm.Forms<a href="initialize"></a>
 
 Once the Nuget packages have been installed you will need to initialize `Robo.Mvvm.Forms`. Add the following line to the `App` method in `App.xaml.cs`:
 
@@ -67,7 +67,7 @@ This accomplishes two things:
 
 ## Coupling Views to ViewModels <a href="views-viewmodels"></a>
 
-### Pages <a href="pages"></a>
+### Pages<a href="pages"></a>
 
 All Base page perform two main operations upon instantiation:
 
@@ -236,7 +236,7 @@ Addition properties available:
 * SelectedViewModel (`BaseViewModel`)
 * ViewModels (`List<BaseViewModel>`)
 
-## Navigation <a href="navigation"></a>
+## Navigation<a href="navigation"></a>
 
 Navigation from one _ViewModel_ to another is extremely simple...
 
@@ -263,7 +263,7 @@ await Navigation.SetRoot<ViewModel>();
 await Navigation.SetRoot(GetViewModel<ViewModel>());
 ```
 
-## Dependency Injection <a href="dependency-injection"></a>
+## Dependency Injection<a href="dependency-injection"></a>
 
 Simple Dependency Injection is exposed through a class called `ServiceContainer` that merely wraps [Simple Injector](https://simpleinjector.org/index.html). 
 
