@@ -1,5 +1,7 @@
 # Robo.Mvvm
 
+<img align="right" src="https://github.com/couchbaselabs/Robo.Mvvm/blob/master/src/Robo.Mvvm/packaging/nuget/logo.png?raw=true" />
+
 The purpose of these projects are to simplify the creation simple/prototype [Xamarin.Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/) apps. 
 
 Again, these projects include a **small** set of functionality with the overall function being to create simple `Xamarin.Forms` apps that adhere to the [Model-View-ViewModel (MVVM)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) design pattern. 
