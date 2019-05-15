@@ -238,7 +238,7 @@ Addition properties available:
 
 ## Navigation<a href="navigation"></a>
 
-Navigation from one _ViewModel_ to another is extremely simple...
+Navigation from one _ViewModel_ to another is very simple. Below are samples, using 'Navigation' for an 'INavigationService' resolution, we are able to perform several actions.
 
 ### Push
 ```csharp
