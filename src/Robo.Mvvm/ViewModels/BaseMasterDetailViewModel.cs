@@ -1,4 +1,5 @@
-﻿using Robo.Mvvm.Services;
+﻿using System;
+using Robo.Mvvm.Services;
 
 namespace Robo.Mvvm.ViewModels
 {
@@ -25,7 +26,7 @@ namespace Robo.Mvvm.ViewModels
 
         protected BaseMasterDetailViewModel(INavigationService navigationService)
         {
-            NavigationService = navigationService;
+           NavigationService = navigationService;
         }
 
         protected BaseMasterDetailViewModel(INavigationService navigationService, BaseViewModel master, BaseViewModel detail)
@@ -35,6 +36,6 @@ namespace Robo.Mvvm.ViewModels
             Detail = detail;
         }
 
-        protected async void SetDetail(BaseViewModel viewModel) => await NavigationService.SetDetailAsync(viewModel);
+        protected async void SetDetail(BaseViewModel viewModel) => await NavigationService?.SetDetailAsync(viewModel);
     }
 }

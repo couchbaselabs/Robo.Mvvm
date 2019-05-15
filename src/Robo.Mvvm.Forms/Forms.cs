@@ -19,7 +19,8 @@ namespace Robo.Mvvm.Forms
         public static void Init<T>(Assembly asm) where T : BaseViewModel
         {
             Init(asm);
-            NavigationService.SetRoot<T>(false);
+
+            NavigationService?.SetRoot<T>(false);
         }
     }
 }

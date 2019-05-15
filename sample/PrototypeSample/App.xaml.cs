@@ -1,4 +1,5 @@
-﻿using PrototypeSample.Core.ViewModels;
+﻿using Prototype.Mvvm;
+using PrototypeSample.Core.ViewModels;
 using Xamarin.Forms;
 
 namespace PrototypeSample
@@ -9,6 +10,7 @@ namespace PrototypeSample
         {
             InitializeComponent();
 
+            // Add this line!
             Robo.Mvvm.Forms.App.Init<RootViewModel>(GetType().Assembly);
         }
     }

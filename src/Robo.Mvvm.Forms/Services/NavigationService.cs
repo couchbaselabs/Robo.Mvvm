@@ -180,9 +180,19 @@ namespace Robo.Mvvm.Services
 
         #region Push
 
-        public Task PushAsync(BaseViewModel viewModel) => FormsNavigation.PushAsync((Page)InstantiateView(viewModel));
+        public Task PushAsync<T>(bool animated = true) where T : BaseViewModel
+        {
+            return PushAsync(ServiceContainer.GetInstance<T>(), animated);
+        }
 
-        public Task PushModalAsync(BaseViewModel viewModel, bool nestedNavigation = false)
+        public Task PushAsync(BaseViewModel viewModel, bool animated) => FormsNavigation.PushAsync((Page)InstantiateView(viewModel), animated);
+
+        public Task PushModalAsync<T>(bool nestedNavigation = false, bool animated = true) where T : BaseViewModel
+        {
+            return PushModalAsync(ServiceContainer.GetInstance<T>(), nestedNavigation, animated);
+        }
+
+        public Task PushModalAsync(BaseViewModel viewModel, bool nestedNavigation = false, bool animated = true)
         {
             viewModel.ViewDisplay = ViewDisplayType.Modal;
 
@@ -199,7 +209,7 @@ namespace Robo.Mvvm.Services
                 page = (Page)view;
             }
 
-            return FormsNavigation.PushModalAsync(page);
+            return FormsNavigation.PushModalAsync(page, animated);
         }
 
         #endregion

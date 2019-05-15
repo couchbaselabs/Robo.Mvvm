@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Robo.Mvvm.Services;
+﻿using Robo.Mvvm.Services;
 using Robo.Mvvm.ViewModels;
 using Xamarin.Forms;
 

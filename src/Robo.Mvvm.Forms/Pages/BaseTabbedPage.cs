@@ -37,11 +37,14 @@ namespace Robo.Mvvm.Forms.Pages
 
         void UpdateBinding()
         {
-            BindingContext = ViewModel;
+            if (ViewModel != null)
+            {
+                BindingContext = ViewModel;
 
-            ViewModel.PropertyChanged += OnPropertyChanged;
+                ViewModel.PropertyChanged += OnPropertyChanged;
 
-            Init();
+                Init();
+            }
         }
 
         protected override void OnDisappearing()
@@ -73,13 +76,16 @@ namespace Robo.Mvvm.Forms.Pages
 
         void OnPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(ViewModel.SelectedIndex))
+            if (ViewModel != null)
             {
-                SelectCurrentPageByIndex(ViewModel.SelectedIndex);
-            }
-            else if (e.PropertyName == nameof(ViewModel.SelectedViewModel))
-            {
-                SelectCurrentPageByBaseViewModel(ViewModel.SelectedViewModel);
+                if (e.PropertyName == nameof(ViewModel.SelectedIndex))
+                {
+                    SelectCurrentPageByIndex(ViewModel.SelectedIndex);
+                }
+                else if (e.PropertyName == nameof(ViewModel.SelectedViewModel))
+                {
+                    SelectCurrentPageByBaseViewModel(ViewModel.SelectedViewModel);
+                }
             }
         }
 
