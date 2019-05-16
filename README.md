@@ -10,23 +10,42 @@ _(Much like how a simple robo..t exists to perform a few, targeted functions. Ye
 
 
 # Table of Contents
-1. [Project Summary](#project-summary)
-2. [Getting Started](#getting-started)
+1. [Available Platforms](#available-platforms)
+2. [Project Summary](#project-summary)
+3. [Getting Started](#getting-started)
     1. [Grab Dat Nuget!](#grab-dat-nuget)
     1. [Initializing](#initializing)
-3. [Coupling Pages to ViewModels](#coupling-pages-to-viewmodels)
+4. [Coupling Pages to ViewModels](#coupling-pages-to-viewmodels)
     1. [Pages](#pages)
     2. [ViewModels](#viewmodels)
-4. [Navigation](#navigation)
-5. [Dependency Injection](#dependency-injection)
-6. [Sample](#sample)
-7. [Contribute](#contribute)
+5. [Navigation](#navigation)
+6. [Dependency Injection](#dependency-injection)
+7. [Sample](#sample)
+8. [Contribute](#contribute)
+
+ ## Available Platforms<a href="available-platforms"></a>
+
+| Platform | Version | Supported |
+| --- | --- | --- |
+| Android | MonoAndroid81 | YES |
+| iOS | Xamarin.iOS10 | YES |
+| UWP | Win10, v. 1809 | YES |
+| MAC | Xamarin.Mac20 | NO |
+| WatchOS | Xamarin.WatchOS10 | PENDING |
+| .NET Standard | 2.0 | YES |
 
 ## Project Summary<a href="project-summary"></a>
 
 * **`Robo.Mvvm`** is a project that contains a few classes/enumerations/etc. to help quickly spin up a platform agnostic Model-View-ViewModel (MVVM) architectural design approach for an application. 
 
 * **`Robo.Mvvm.Forms`** is a project that uses the `Robo.Mvvm` project, and provides a set of `Xamarin.Forms` specific class/object extensions that make creating prototype and simple `Xamarin.Forms` apps painless. 
+
+    ### High-level features:
+
+    * View-ViewModel coupling (with automatic setting of BindingContext)
+    * ViewModel to ViewModel navigation 
+    * Built-in [IoC](https://en.wikipedia.org/wiki/Inversion_of_control) via depenedency injection (or generic service location depending on how you want to us it)
+    * Auto-registration of View-ViewModel relationships (**Note**: this can also be done manually)
 
 ## Getting Started<a href="getting-started"></a>
 
