@@ -171,9 +171,29 @@ public partial class TestTabbedPage : BaseTabbedPage<CollectionViewModel>
 
 ### ViewModels<a href="viewmodels"></a>
 
+#### BaseNotify
+
+`BaseNotify` is an abstract class that implements INotifyPropertyChanged, and provides implementations for:
+
+PropertyChanged
+```csharp
+public event PropertyChangedEventHandler PropertyChanged;
+```
+
+SetPropertyChanged
+```csharp
+public void SetPropertyChanged(string propertyName)
+{ ... }
+
+protected virtual bool SetPropertyChanged<T>(ref T currentValue, T newValue, [CallerMemberName] string propertyName = "")
+{ ... }
+```
+
 #### BaseViewModel
 
-Inherit from `BaseViewModel` for all navigation enabled ViewModels, and ViewModels you want to bind to `BaseContentPage`. Note that you are _not_ limited to only binding to `BaseContentPage`
+`BaseViewModel` inherits from `BaseNotify`. 
+
+You can inherit from the abstract class `BaseViewModel` for all navigation enabled ViewModels, and ViewModels you want to bind to `BaseContentPage`. Note that you are _not_ limited to only binding to `BaseContentPage`
 
 ```csharp
 public class ViewModel1 : BaseViewModel
@@ -191,7 +211,7 @@ Methods available:
 
 #### BaseMasterDetailViewModel
 
-Inherit from `BaseMasterDetailViewModel` for ViewModels you want to bind to a `BaseMasterDetailPage`. 
+Inherit from abstract class `BaseMasterDetailViewModel` for ViewModels you want to bind to a `BaseMasterDetailPage`. 
 
 ```csharp 
 public class RootViewModel : BaseMasterDetailViewModel
@@ -223,7 +243,7 @@ Additional methods available:
 
 #### BaseCollectionViewModel
 
-Inherit from `BaseCollectionViewModel` for ViewModels you want to bind to a `BaseTabbedDetailPage`. 
+Inherit from the abstract class `BaseCollectionViewModel` for ViewModels you want to bind to a `BaseTabbedDetailPage`. 
 
 ```csharp
 public class CollectionViewModel : BaseCollectionViewModel
