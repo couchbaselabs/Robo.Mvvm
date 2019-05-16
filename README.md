@@ -19,7 +19,7 @@ _(Much like how a simple robo..t exists to perform a few, targeted functions. Ye
     1. [Pages](#pages)
     2. [ViewModels](#viewmodels)
 5. [Navigation](#navigation)
-6. [Dependency Injection & Service Location](#dependency-injection)
+6. [Dependency Injection & Service Location](#dependency-injection-service-location)
 7. [Sample](#sample)
 8. [Contribute](#contribute)
 
@@ -304,7 +304,7 @@ await Navigation.SetRoot<ViewModel>();
 await Navigation.SetRoot(GetViewModel<ViewModel>());
 ```
 
-## Dependency Injection<a href="dependency-injection"></a>
+## Dependency Injection & Service Location<a href="dependency-injection-service-location"></a>
 
 Simple Dependency Injection is exposed through a class called `ServiceContainer` that merely wraps [Simple Injector](https://simpleinjector.org/index.html). 
 
