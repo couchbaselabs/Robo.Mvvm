@@ -44,8 +44,8 @@ _(Much like how a simple robo..t exists to perform a few, targeted functions. Ye
 
     * View-ViewModel coupling (with automatic setting of BindingContext)
     * ViewModel to ViewModel navigation 
-    * Built-in [IoC](https://en.wikipedia.org/wiki/Inversion_of_control) via depenedency injection (or generic service location depending on what you're into)
-    * Auto-registration of View-ViewModel relationships (**Note**: this can also be done manually)
+    * Built-in [IoC](https://en.wikipedia.org/wiki/Inversion_of_control) via depenedency injection (or generic service location depending on what you're into) using `ServiceContainer` located in the `Robo.Mvvm` namespace.
+    * Auto-registration of View-ViewModel relationships (**Note**: this can also be done manually using the previously mentioned `ServiceContainer`)
 
 ## Getting Started<a href="getting-started"></a>
 
