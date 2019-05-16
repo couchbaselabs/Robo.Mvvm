@@ -317,12 +317,12 @@ Service.Container.Resolve<IAlertService>();
 ### Resolving Manually
 
 ```csharp
-ServiceContainer.Register<IAlertService>(new AlertService());
+var alertService = ServiceContainer.Register<IAlertService>(new AlertService());
 ```
 
 ### Resolving via Constructor Injection
 ```csharp
-public ViewModel1(INavigationService navigationService)
+public ViewModel1(IAlertService alertService)
 ```
 
 ## Sample<a href="#sample"></a>
