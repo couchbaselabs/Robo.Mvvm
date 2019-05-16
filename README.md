@@ -308,7 +308,7 @@ public ViewModel1(INavigationService navigationService)
 
 ## Sample<a href="#sample"></a>
 
-Please feel free to clone this repository, and run the sample located [here](https://github.com/couchbaselabs/Robo.Mvvm/tree/master/sample).
+Please feel free to clone this repository, and run the sample located [here](https://github.com/couchbaselabs/Robo.Mvvm/tree/master/sample). The sample app contains a demonstration of all the major features included in `Robo.Mvvm` and `Robo.Mvvm.Forms`.
 
 ## Contribute<a href="#contribute"></a>
     
