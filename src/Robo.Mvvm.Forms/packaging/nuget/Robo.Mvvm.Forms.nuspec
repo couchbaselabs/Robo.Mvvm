@@ -3,7 +3,7 @@
   <metadata>
     <id>Robo.Mvvm.Forms</id>
     <title>Robo MVVM for Xamarin.Forms</title>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Rob Hedgpeth</authors>
     <owners>Couchbase Labs</owners>
     <projectUrl>https://github.com/couchbaselabs/Robo.Mvvm</projectUrl>
@@ -16,7 +16,7 @@
     <tags>mvvm mobile netcore xamarin ios android windows linux mac osx nosql</tags>
     <language>en-US</language>
     <license type="expression">Apache-2.0</license>
-    <releaseNotes>Initial release!</releaseNotes>
+    <releaseNotes>Add method overloads to NavigationService.</releaseNotes>
     <dependencies>
       <group targetFramework="netstandard2.0">
         <dependency id="Xamarin.Forms" version="3.6.0.344457" />

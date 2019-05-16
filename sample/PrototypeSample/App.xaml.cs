@@ -1,5 +1,4 @@
-﻿using Prototype.Mvvm;
-using PrototypeSample.Core.ViewModels;
+﻿using PrototypeSample.Core.ViewModels;
 using Xamarin.Forms;
 
 namespace PrototypeSample

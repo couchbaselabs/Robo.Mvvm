@@ -17,9 +17,6 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Prototype.Mvvm" Version="1.0.0" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\src\Robo.Mvvm\Robo.Mvvm.csproj" />
   </ItemGroup>
 </Project>
