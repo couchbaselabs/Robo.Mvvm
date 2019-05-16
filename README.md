@@ -19,7 +19,7 @@ _(Much like how a simple robo..t exists to perform a few, targeted functions. Ye
     1. [Pages](#pages)
     2. [ViewModels](#viewmodels)
 5. [Navigation](#navigation)
-6. [Dependency Injection](#dependency-injection)
+6. [Dependency Injection & Service Location](#dependency-injection)
 7. [Sample](#sample)
 8. [Contribute](#contribute)
 
