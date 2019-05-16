@@ -13,22 +13,24 @@ _(Much like how a simple robo..t exists to perform a few, targeted functions. Ye
 1. [Project Summary](#project-summary)
 2. [Getting Started](#getting-started)
     1. [Grab Dat Nuget!](#grab-dat-nuget)
-    1. [Initializing Robo.Mvvm.Forms](#initiliaze)
-3. [Coupling Pages to ViewModels](#views-viewmodels)
+    1. [Initializing](#initializing)
+3. [Coupling Pages to ViewModels](#coupling-pages-to-viewmodels)
     1. [Pages](#pages)
     2. [ViewModels](#viewmodels)
 4. [Navigation](#navigation)
 5. [Dependency Injection](#dependency-injection)
+6. [Sample](#sample)
+7. [Contribute](#contribute)
 
-## Project Summary <a href="project-summary"></a>
+## Project Summary<a href="project-summary"></a>
 
 * **`Robo.Mvvm`** is a project that contains a few classes/enumerations/etc. to help quickly spin up a platform agnostic Model-View-ViewModel (MVVM) architectural design approach for an application. 
 
 * **`Robo.Mvvm.Forms`** is a project that uses the `Robo.Mvvm` project, and provides a set of `Xamarin.Forms` specific class/object extensions that make creating prototype and simple `Xamarin.Forms` apps painless. 
 
-## Getting Started <a href="getting-started"></a>
+## Getting Started<a href="getting-started"></a>
 
-### Grab Dat Nuget! <a href="grab-dat-nuget"></a>
+### Grab Dat Nuget!<a href="grab-dat-nuget"></a>
 Yes, there's a nuget for this! In fact, there are two:
 
 1. `Robo.Mvvm` [![GitHub release](https://img.shields.io/nuget/v/Robo.Mvvm.svg?style=plastic)](https://www.nuget.org/packages/Robo.Mvvm)
@@ -44,7 +46,7 @@ So, you may be wondering, which one do I use and where? Well, there's a simple a
 
 So, it's best to separate your `Xamarin.Forms` app/view level code (i.e. ContentPage, ContentView, Button, etc.) from your ViewModels. At the very least, in separate projects. <./rant>
 
-### Initialize Robo.Mvvm.Forms <a href="initialize"></a>
+### Initializing<a href="initializing"></a>
 
 Once the Nuget packages have been installed you will need to initialize `Robo.Mvvm.Forms`. Add the following line to the `App` method in `App.xaml.cs`:
 
@@ -65,9 +67,9 @@ This accomplishes two things:
 1. Registers and couples the Views to ViewModels
 2. The _Generic_ () assigned to the `Init` method establishes the `MainPage` (and coupled ViewModel).
 
-## Coupling Views to ViewModels <a href="views-viewmodels"></a>
+## Coupling Pages to ViewModels<a href="coupling-pages-to-viewmodels"></a>
 
-### Pages <a href="pages"></a>
+### Pages<a href="pages"></a>
 
 All Base page perform two main operations upon instantiation:
 
@@ -167,7 +169,7 @@ The `TabbedPge` implementation just needs to inherit from `BaseTabbedPage` and p
 public partial class TestTabbedPage : BaseTabbedPage<CollectionViewModel>
 ```
 
-### ViewModels <a href="viewmodels"></a>
+### ViewModels<a href="viewmodels"></a>
 
 #### BaseViewModel
 
@@ -236,9 +238,9 @@ Addition properties available:
 * SelectedViewModel (`BaseViewModel`)
 * ViewModels (`List<BaseViewModel>`)
 
-## Navigation <a href="navigation"></a>
+## Navigation<a href="navigation"></a>
 
-Navigation from one _ViewModel_ to another is extremely simple...
+Navigation from one _ViewModel_ to another is very simple. Below are samples, using 'Navigation' for an 'INavigationService' resolution, we are able to perform several actions.
 
 ### Push
 ```csharp
@@ -263,7 +265,7 @@ await Navigation.SetRoot<ViewModel>();
 await Navigation.SetRoot(GetViewModel<ViewModel>());
 ```
 
-## Dependency Injection <a href="dependency-injection"></a>
+## Dependency Injection<a href="dependency-injection"></a>
 
 Simple Dependency Injection is exposed through a class called `ServiceContainer` that merely wraps [Simple Injector](https://simpleinjector.org/index.html). 
 
@@ -284,8 +286,13 @@ ServiceContainer.Register<IAlertService>(new AlertService());
 public ViewModel1(INavigationService navigationService)
 ```
 
+## Sample<a href="#sample"></a>
 
+Please feel free to clone this repository, and run the sample located [here](https://github.com/couchbaselabs/Robo.Mvvm/tree/master/sample).
 
+## Contribute<a href="#contribute"></a>
+    
+Please feel free to contribute to this project! I certainly need all the help I can get, and welcome all PR's, issues, questions, etc. You can also contact me at [robert.hedgpeth@couchbase.com](mailto:robert.hedgpeth@couchbase.com) and on [Twitter](https://twitter.com/probablyrealrob).
 
 
 
