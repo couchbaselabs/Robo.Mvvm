@@ -13,7 +13,7 @@ _(Much like how a simple robo..t exists to perform a few, targeted functions. Ye
 1. [Project Summary](#project-summary)
 2. [Getting Started](#getting-started)
     1. [Grab Dat Nuget!](#grab-dat-nuget)
-    1. [Initializing](#initialize)
+    1. [Initializing](#initializing)
 3. [Coupling Pages to ViewModels](#coupling-pages-to-viewmodels)
     1. [Pages](#pages)
     2. [ViewModels](#viewmodels)
@@ -46,7 +46,7 @@ So, you may be wondering, which one do I use and where? Well, there's a simple a
 
 So, it's best to separate your `Xamarin.Forms` app/view level code (i.e. ContentPage, ContentView, Button, etc.) from your ViewModels. At the very least, in separate projects. <./rant>
 
-### Initializing<a href="initialize"></a>
+### Initializing<a href="initializing"></a>
 
 Once the Nuget packages have been installed you will need to initialize `Robo.Mvvm.Forms`. Add the following line to the `App` method in `App.xaml.cs`:
 
