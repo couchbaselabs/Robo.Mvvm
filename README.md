@@ -314,13 +314,13 @@ Simple Dependency Injection is exposed through a class called `ServiceContainer`
 Service.Container.Resolve<IAlertService>();
 ```
 
-### Resolving (Manually)
+### Resolving Manually
 
 ```csharp
 ServiceContainer.Register<IAlertService>(new AlertService());
 ```
 
-### Constructor Injection
+### Resolving via Constructor Injection
 ```csharp
 public ViewModel1(INavigationService navigationService)
 ```
