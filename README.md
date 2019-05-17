@@ -67,7 +67,7 @@ So, it's best to separate your `Xamarin.Forms` app/view level code (i.e. Content
 
 ### Initializing<a href="initializing"></a>
 
-Once the Nuget packages have been installed you will need to initialize `Robo.Mvvm.Forms`. Add the following line to the `App` method in `App.xaml.cs`:
+Once the Nuget packages have been installed you will need to initialize `Robo.Mvvm.Forms`. Add the following line to `App.xaml.cs` (ideally in the constructor):
 
 ```csharp
 public App()
