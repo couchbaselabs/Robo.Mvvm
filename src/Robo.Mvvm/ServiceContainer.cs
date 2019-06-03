@@ -32,26 +32,12 @@ namespace Robo.Mvvm
         }
 
         public static void Register<TService>(TService instance) where TService : class
-        {
-            _container.RegisterInstance(instance);
-        }
+            => _container.RegisterInstance(instance);
 
-        public static T GetInstance<T>() where T : class
-        {
-            try
-            {
-                return _container.GetInstance<T>();
-            }
-            catch (ActivationException)
-            {
-                return null;
-            }
-        }
+        public static T GetInstance<T>() where T : class => _container.GetInstance<T>();
 
         internal static T GetRequiredInstance<T>() where T : class
-        {
-            return GetInstance<T>() ?? throw new InvalidOperationException(
+            => GetInstance<T>() ?? throw new InvalidOperationException(
                        $@"A required dependency injection class is missing ({typeof(T).FullName}).");
-        }
     }
 }
